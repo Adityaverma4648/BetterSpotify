@@ -18,7 +18,7 @@ const Discover = () => {
            </select>
         </div>
         <div className="Container">
-            <div className="cardCont gap-8">
+            <div className="cardCont gap-8 bg-white">
                 {[1,2,3,4,5,6,7,8,9,10].map((song,i) => (
                     <SongCard 
                         key = {song.key}
