@@ -1,0 +1,55 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.Discover{
+    max-width: 70vw;
+    min-height: 90vh;
+    padding: 1rem 0px;
+    overflow: scroll;
+    background-color: rgb(46, 114, 114);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+.search {
+    width: 95%;
+    display: flex;
+    padding: 10px 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items : center;
+}
+.Discover h2{
+    font-size: 23px;
+    font-weight: 600;
+    padding: 0px 10px;
+    color: antiquewhite;
+}
+.Discover::-webkit-scrollbar{
+    display: none;
+}
+.search select{
+    padding: 5px 2rem;
+    background-color: rgb(27, 43, 43);
+    color: aliceblue;
+    border: none;
+}
+.Container{
+    padding: 2rem 0px;
+  width : 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardCont{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-self: start; */
+    justify-content: center;
+    align-items: center;
+}
