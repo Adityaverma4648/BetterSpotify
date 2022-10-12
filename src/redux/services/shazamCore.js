@@ -18,12 +18,12 @@ import {createApi , fetchBaseQuery} from '@reduxjs/toolkit/query/react'
         reducerPath : 'shazamCoreApi',
         baseQuery : fetchBaseQuery({
             baseUrl : 'https://shazam-core.p.rapidapi.com/v1',
-            prepareHeaders : () => {
+            prepareHeaders : (headers) => {
                 headers.set('X-RapidAPI-Key','4fbcfea748msh22a8e752a443b6dp15a8afjsn3b3623db9eae');
                 return headers;
             },
         }),
-        endpoints : (builder) => ({
+        endpoints: (builder) => ({
             getTopCharts : builder.query({query: ()=>'/charts/world'}),
         })
     });

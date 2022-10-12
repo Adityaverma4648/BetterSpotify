@@ -6,7 +6,6 @@ import { useGetTopChartsQuery } from '../redux/services/shazamCore';
 
 const Discover = () => {
    const {data, isFetching, error} = useGetTopChartsQuery();
-   console.log(genres);
    const genreTitle = 'pop';
 
    if(isFetching) return <Loader title = "Loading Songs"></Loader>
@@ -26,7 +25,7 @@ const Discover = () => {
            </select>
         </div>
         <div className="Container">
-            <div className="cardCont gap-8 bg-white">
+            <div className="cardCont gap-8">
                 {data?.map((song,i) => (
                     <SongCard 
                         key = {song.key}
