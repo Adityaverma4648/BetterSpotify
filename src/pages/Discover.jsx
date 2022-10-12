@@ -1,9 +1,17 @@
 import {Error,Loader,SongCard} from '../components'
 import {genres} from '../assets/constants.js'
-import '../pages/Discover.css'
+import '../pages/Discover.css';
+
+import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+
 const Discover = () => {
+   const {data, isFetching, error} = useGetTopChartsQuery();
    console.log(genres);
    const genreTitle = 'pop';
+
+   if(isFetching) return <Loader title = "Loading Songs"></Loader>
+
+   console.log(data)
 
    return(
 
@@ -19,7 +27,7 @@ const Discover = () => {
         </div>
         <div className="Container">
             <div className="cardCont gap-8 bg-white">
-                {[1,2,3,4,5,6,7,8,9,10].map((song,i) => (
+                {data?.map((song,i) => (
                     <SongCard 
                         key = {song.key}
                         song = {song}
